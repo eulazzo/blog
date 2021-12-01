@@ -1,4 +1,4 @@
- ## Not finished yet
+ ## In Progress...
  ## Blog App with React 
  
 With featured and recent posts, categories. full markdown articles, author information,</br>
