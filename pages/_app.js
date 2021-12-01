@@ -3,7 +3,7 @@ import "../styles/global.scss";
 
 import { Layout } from "../components";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 function MyApp({ Component, pageProps }) {
   return (
