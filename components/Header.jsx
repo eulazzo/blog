@@ -1,14 +1,18 @@
 import { useContext } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import { useState, useEffect } from "react";
+import { getCategories } from "../services";
 
-const categories = [
-  { name: "React", slug: "React" },
-  { name: "Red Team", slug: "Python" },
-  { name: "Games", slug: "Unity" },
-];
-
+ 
 const Header = () => {
+  const [categories, setCategories] = useState([]);
+
+  useEffect(() => {
+    getCategories().then((newCategory) => setCategories(newCategory));
+  }, []);
+
+  console.log(categories);
+
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="border-b-2 w-full inline-block  py-8">
@@ -34,11 +38,3 @@ const Header = () => {
 
 export default Header;
 
-{
-  /* <div
-  className="relative  hidden lg:inline-grid  
-                h-10 w-24 cursor-pointer  "
->
-  <Image src="/../public/logo.svg" layout="fill" objectFit="contain" />
-</div>; */
-}
