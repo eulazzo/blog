@@ -9,7 +9,7 @@ const Categories = () => {
     getCategories().then((newCategory) => setCategories(newCategory));
   }, []);
 
-  console.log(categories);
+ 
 
   return (
     <div className="border rounded-lg  p-8 mb-8 pb-12">

@@ -11,7 +11,7 @@ const Header = () => {
     getCategories().then((newCategory) => setCategories(newCategory));
   }, []);
 
-  console.log(categories);
+ 
 
   return (
     <div className="container mx-auto px-10 mb-8">
