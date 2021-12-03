@@ -98,12 +98,14 @@ const PostDetail = ({ post }) => {
           {" "}
           {post.title}
         </h1>
-        {post.content.raw.children.map((typeObj, index) => {
-          const children = typeObj.children.map((item, itemIndex) =>
-            getContentFragment(itemIndex, item.text, item)
-          );
-          return getContentFragment(typeObj, children, typeObj, typeObj.type);
-        })}
+        <div className="leading-7">
+          {post.content.raw.children.map((typeObj, index) => {
+            const children = typeObj.children.map((item, itemIndex) =>
+              getContentFragment(itemIndex, item.text, item)
+            );
+            return getContentFragment(typeObj, children, typeObj, typeObj.type);
+          })}
+        </div>
       </div>
     </div>
   );
