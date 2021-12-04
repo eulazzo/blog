@@ -2,8 +2,8 @@ import { useContext } from "react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { getCategories } from "../services";
+import Image from "next/image";
 
- 
 const Header = () => {
   const [categories, setCategories] = useState([]);
 
@@ -11,17 +11,16 @@ const Header = () => {
     getCategories().then((newCategory) => setCategories(newCategory));
   }, []);
 
- 
-
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="border-b-2 w-full inline-block  py-8">
         <div className="md:float-left block">
           <Link href="/">
-            <span className="cursor-pointer font-bold  text-4xl">Sigma</span>
+            <span className="cursor-pointer font-bold text-yellow-500  text-4xl">Toppo</span>
           </Link>
         </div>
 
+      
         <div className="hidden md:float-left md:contents">
           {categories.map((category) => (
             <Link key={category.slug} href={`/category/${category.slug}`}>
@@ -37,4 +36,3 @@ const Header = () => {
 };
 
 export default Header;
-

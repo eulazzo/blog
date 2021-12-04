@@ -9,7 +9,7 @@ const Comments = ({ slug }) => {
     getComments(slug).then((resp) => setComments(resp));
   }, []);
 
-  console.log(comments);
+ 
 
   return (
     <>
